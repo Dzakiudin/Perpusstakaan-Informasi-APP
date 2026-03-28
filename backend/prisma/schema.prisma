@@ -1,0 +1,143 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int        @id @default(autoincrement())
+  name         String
+  email        String     @unique
+  password     String
+  role         String     @default("pustakawan") // admin, pustakawan
+  isActive     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  loans        Loan[]     @relation("CreatedLoans")
+  auditLogs    AuditLog[]
+}
+
+model Class {
+  id         Int      @id @default(autoincrement())
+  name       String   @unique
+  waliKelas  String?
+  createdAt  DateTime @default(now())
+  members    Member[]
+}
+
+model Member {
+  id           Int           @id @default(autoincrement())
+  nis          String        @unique
+  name         String
+  classId      Int?
+  class        Class?        @relation(fields: [classId], references: [id], onDelete: SetNull)
+  phone        String?
+  address      String?
+  photoPath    String?
+  memberSince  DateTime      @default(now())
+  status       String        @default("active") // active, inactive, suspended
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  loans        Loan[]
+  reservations Reservation[]
+
+  @@index([status])
+  @@index([classId])
+}
+
+model Book {
+  id              Int           @id @default(autoincrement())
+  isbn            String        @unique
+  barcode         String        @unique
+  title           String
+  author          String
+  publisher       String?
+  category        String?
+  rackLocation    String?
+  totalCopies     Int           @default(1)
+  availableCopies Int           @default(1)
+  coverPath       String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  loanItems       LoanItem[]
+  reservations    Reservation[]
+
+  @@index([category])
+  @@index([availableCopies])
+}
+
+model Loan {
+  id          Int        @id @default(autoincrement())
+  memberId    Int?
+  member      Member?    @relation(fields: [memberId], references: [id], onDelete: SetNull)
+  memberName  String?    // Preserved name after member deletion
+  loanDate    DateTime   @default(now())
+  dueDate     DateTime
+  returnDate  DateTime?
+  status      String     @default("active") // active, returned, overdue
+  finedAmount Float      @default(0)
+  createdById Int
+  createdBy   User       @relation("CreatedLoans", fields: [createdById], references: [id])
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  items       LoanItem[]
+
+  @@index([status])
+  @@index([memberId])
+  @@index([dueDate])
+}
+
+model LoanItem {
+  id         Int       @id @default(autoincrement())
+  loanId     Int
+  loan       Loan      @relation(fields: [loanId], references: [id], onDelete: Cascade)
+  bookId     Int?
+  book       Book?     @relation(fields: [bookId], references: [id], onDelete: SetNull)
+  bookTitle  String?   // Preserved title after book deletion
+  bookBarcode String?  // Preserved barcode after book deletion
+  status     String    @default("borrowed") // borrowed, returned
+  returnedAt DateTime?
+
+  @@index([status])
+  @@index([bookId])
+}
+
+model Settings {
+  id              Int      @id @default(autoincrement())
+  key             String   @unique
+  value           String
+  description     String?
+  updatedAt       DateTime @updatedAt
+}
+
+model Reservation {
+  id            Int      @id @default(autoincrement())
+  memberId      Int
+  member        Member   @relation(fields: [memberId], references: [id])
+  bookId        Int
+  book          Book     @relation(fields: [bookId], references: [id])
+  queuePosition Int
+  status        String   @default("waiting") // waiting, ready, fulfilled, cancelled
+  reservedAt    DateTime @default(now())
+  notifiedAt    DateTime?
+  fulfilledAt   DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model AuditLog {
+  id          Int      @id @default(autoincrement())
+  userId      Int?
+  user        User?    @relation(fields: [userId], references: [id])
+  action      String   // CREATE, UPDATE, DELETE, LOGIN, LOGOUT
+  entity      String   // Book, Member, Loan, etc.
+  entityId    Int?
+  details     String?  // JSON string of changes
+  ipAddress   String?
+  userAgent   String?
+  createdAt   DateTime @default(now())
+}
+

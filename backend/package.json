@@ -1,0 +1,58 @@
+{
+  "name": "perpus-backend",
+  "version": "1.0.0",
+  "description": "Library Management System - Backend API",
+  "author": "Ahmad Dzakiudin <dzakiudin07@gmail.com>",
+  "license": "UNLICENSED",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:reset": "prisma migrate reset --force",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.10.0",
+    "bcryptjs": "^2.4.3",
+    "bwip-js": "^4.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.4",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mailtrap": "^4.4.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^8.0.1",
+    "pdfkit": "^0.15.0",
+    "qrcode": "^1.5.4",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.3.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/multer": "^1.4.13",
+    "@types/qrcode": "^1.5.6",
+    "@types/node": "^20.19.33",
+    "@types/nodemailer": "^7.0.9",
+    "@types/pdfkit": "^0.13.4",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
+    "prisma": "^5.22.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^4.0.18"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}
