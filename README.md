@@ -11,15 +11,15 @@ Berikut adalah pratinjau antarmuka (*mockup*) dari aplikasi Perpustakaan Informa
 
 ### 1. Dashboard Utama
 Menampilkan statistik ringkas perpustakaan, tingkat peminjaman, dan aktivitas terbaru.
-![Dashboard](docs/images/dashboard.png)
+![Dashboard](docs/dashboard.png)
 
 ### 2. Manajemen Buku & Koleksi
 Daftar buku dengan fitur pencarian, filter kategori, status ketersediaan, dan *ISBN lookup*.
-![Koleksi Buku](docs/images/books.png)
+![Koleksi Buku](docs/books.png)
 
 ### 3. Transaksi Peminjaman
 Proses pinjam meminjam terpadu, mendukung pencarian anggota dan *scan Barcode / QR Code*.
-![Peminjaman Buku](docs/images/loans.png)
+![Peminjaman Buku](docs/loans.png)
 
 *(Tampilan di atas merupakan ilustrasi desain modern. Screenshot asli dapat diupdate dengan menimpa file di dalam direktori `docs/images/`)*
 
