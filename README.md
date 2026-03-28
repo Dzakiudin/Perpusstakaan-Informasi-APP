@@ -5,6 +5,26 @@ Dibangun dengan arsitektur **monorepo** menggunakan **React** (Frontend) dan **N
 
 ---
 
+## 📸 Tampilan Aplikasi
+
+Berikut adalah pratinjau antarmuka (*mockup*) dari aplikasi Perpustakaan Informasi:
+
+### 1. Dashboard Utama
+Menampilkan statistik ringkas perpustakaan, tingkat peminjaman, dan aktivitas terbaru.
+![Dashboard](docs/images/dashboard.png)
+
+### 2. Manajemen Buku & Koleksi
+Daftar buku dengan fitur pencarian, filter kategori, status ketersediaan, dan *ISBN lookup*.
+![Koleksi Buku](docs/images/books.png)
+
+### 3. Transaksi Peminjaman
+Proses pinjam meminjam terpadu, mendukung pencarian anggota dan *scan Barcode / QR Code*.
+![Peminjaman Buku](docs/images/loans.png)
+
+*(Tampilan di atas merupakan ilustrasi desain modern. Screenshot asli dapat diupdate dengan menimpa file di dalam direktori `docs/images/`)*
+
+---
+
 ## 🚀 Fitur Utama
 
 - **Dashboard** — Statistik ringkas perpustakaan secara real-time.
