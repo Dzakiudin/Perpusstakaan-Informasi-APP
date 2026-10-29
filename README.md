@@ -1,123 +1,151 @@
-# Perpustakaan Informasi APP 📚
+<!--
+  Perpustakaan Informasi APP
+  Promotional banner created for this repository.
+-->
 
-Sistem Manajemen Perpustakaan Sekolah yang modern, cepat, dan mudah digunakan.  
-Dibangun dengan arsitektur **monorepo** menggunakan **React** (Frontend) dan **Node.js + Express** (Backend).
+<p align="center">
+  <img src="docs/perpustakaan-informasi-banner.svg" alt="Perpustakaan Informasi APP — Smart Library Management" width="100%">
+</p>
 
----
+<h1 align="center">Perpustakaan Informasi APP</h1>
 
-## 📸 Tampilan Aplikasi
+<p align="center">
+  Sistem manajemen perpustakaan digital untuk mengelola koleksi buku, anggota, transaksi peminjaman, reservasi, dan laporan dalam satu platform.
+</p>
 
-Berikut adalah pratinjau antarmuka (*mockup*) dari aplikasi Perpustakaan Informasi:
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-Ready-3178C6?logo=typescript&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-Backend-339933?logo=nodedotjs&logoColor=white">
+  <img alt="SQLite" src="https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white">
+</p>
 
-### 1. Dashboard Utama
-Menampilkan statistik ringkas perpustakaan, tingkat peminjaman, dan aktivitas terbaru.
-![Dashboard](docs/dashboard.png)
-
-### 2. Manajemen Buku & Koleksi
-Daftar buku dengan fitur pencarian, filter kategori, status ketersediaan, dan *ISBN lookup*.
-![Koleksi Buku](docs/books.png)
-
-### 3. Transaksi Peminjaman
-Proses pinjam meminjam terpadu, mendukung pencarian anggota dan *scan Barcode / QR Code*.
-![Peminjaman Buku](docs/loans.png)
-
-*(Tampilan di atas merupakan ilustrasi desain modern. Screenshot asli dapat diupdate dengan menimpa file di dalam direktori `docs/images/`)*
-
----
-
-## 🚀 Fitur Utama
-
-- **Dashboard** — Statistik ringkas perpustakaan secara real-time.
-- **Manajemen Buku** — CRUD buku lengkap dengan ISBN lookup, barcode, dan tracking lokasi rak.
-- **Manajemen Anggota** — Data siswa/guru yang terintegrasi dengan kelas.
-- **Transaksi Peminjaman** — Proses pinjam & kembali dengan scan QR Code/Barcode.
-- **Reservasi Buku** — Sistem antrian reservasi untuk buku yang sedang dipinjam.
-- **Laporan Otomatis** — Generate laporan dalam format Excel dan PDF.
-- **Manajemen User** — Role-based access (Admin & Pustakawan).
-- **Audit Log** — Pencatatan semua aktivitas pengguna.
-- **Dokumentasi API** — Terintegrasi dengan Swagger UI.
-- **Responsive Design** — Akses via HP, tablet, atau PC.
+<p align="center">
+  <a href="#fitur-utama">Fitur</a> ·
+  <a href="#pratinjau-aplikasi">Pratinjau</a> ·
+  <a href="#instalasi">Instalasi</a> ·
+  <a href="#dokumentasi-api">API</a>
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+## Tentang Proyek
+
+**Perpustakaan Informasi APP** adalah aplikasi manajemen perpustakaan berbasis web yang dirancang untuk membantu proses operasional perpustakaan menjadi lebih terstruktur. Proyek ini menggunakan pendekatan *monorepo* dengan aplikasi *frontend* React dan layanan *backend* Node.js + Express.
+
+## Fitur Utama
+
+| Fitur | Deskripsi |
+|---|---|
+| Dashboard | Ringkasan statistik dan aktivitas perpustakaan. |
+| Manajemen buku | Pengelolaan data buku, ISBN lookup, kode batang, dan lokasi rak. |
+| Manajemen anggota | Pengelolaan data anggota, termasuk siswa dan guru. |
+| Peminjaman dan pengembalian | Pengelolaan transaksi buku serta dukungan pemindaian QR/kode batang. |
+| Reservasi buku | Antrean reservasi buku yang sedang dipinjam. |
+| Laporan | Pembuatan laporan dalam format PDF dan Excel. |
+| Manajemen pengguna | Pembagian akses berdasarkan peran Admin dan Pustakawan. |
+| Audit log | Pencatatan aktivitas pengguna. |
+| Dokumentasi API | Dokumentasi endpoint melalui Swagger UI. |
+| Desain responsif | Antarmuka untuk perangkat desktop, tablet, dan ponsel. |
+
+## Pratinjau Aplikasi
+
+Berikut adalah ilustrasi antarmuka untuk menggambarkan alur dan tampilan aplikasi.
+
+<table>
+  <tr>
+    <td width="50%">
+      <p align="center"><strong>Dashboard</strong></p>
+      <img src="docs/dashboard.png" alt="Pratinjau dashboard Perpustakaan Informasi APP" width="100%">
+    </td>
+    <td width="50%">
+      <p align="center"><strong>Manajemen Koleksi Buku</strong></p>
+      <img src="docs/books.png" alt="Pratinjau halaman koleksi buku" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p align="center"><strong>Transaksi Peminjaman</strong></p>
+      <img src="docs/loans.png" alt="Pratinjau transaksi peminjaman buku" width="100%">
+    </td>
+  </tr>
+</table>
+
+> Catatan: gambar di atas merupakan ilustrasi antarmuka. Ganti gambar dengan tangkapan layar aktual aplikasi ketika tersedia.
+
+## Teknologi yang Digunakan
 
 ### Frontend
-| Teknologi | Kegunaan |
-|-----------|----------|
-| React 18 + Vite | Framework & build tool |
-| TypeScript | Type safety |
-| Tailwind CSS | Styling |
-| React Router DOM | Routing |
-| Recharts | Visualisasi data chart |
-| Axios | HTTP Client |
-| JsPDF | Generate laporan PDF |
-| html5-qrcode | Scanner QR/Barcode |
+- **React 18** dan **Vite** untuk antarmuka dan proses *build*.
+- **TypeScript** untuk pengetikan statis.
+- **Tailwind CSS** untuk pengaturan tampilan.
+- **React Router DOM** untuk navigasi halaman.
+- **Recharts** untuk visualisasi data.
+- **Axios** untuk komunikasi HTTP.
+- **jsPDF** untuk pembuatan dokumen PDF.
+- **html5-qrcode** untuk pemindaian QR/kode batang.
 
 ### Backend
-| Teknologi | Kegunaan |
-|-----------|----------|
-| Node.js + Express | Runtime & framework |
-| TypeScript | Type safety |
-| Prisma ORM | Database access |
-| SQLite | Database (ringan, tanpa setup server) |
-| JWT + BcryptJS | Authentication & hashing |
-| Winston | Logging |
-| Multer | File upload |
-| Swagger | API documentation |
-| PDFKit + ExcelJS | Generate laporan |
-| Nodemailer | Notifikasi email |
-| bwip-js + qrcode | Barcode & QR generator |
+- **Node.js** dan **Express** untuk layanan API.
+- **TypeScript** untuk pengetikan statis.
+- **Prisma ORM** untuk akses basis data.
+- **SQLite** sebagai basis data.
+- **JWT** dan **BcryptJS** untuk autentikasi dan pengamanan kata sandi.
+- **Winston** untuk pencatatan log.
+- **Multer** untuk unggahan berkas.
+- **Swagger** untuk dokumentasi API.
+- **PDFKit** dan **ExcelJS** untuk laporan.
+- **Nodemailer** untuk pengiriman email.
+- **bwip-js** dan **qrcode** untuk pembuatan kode batang dan QR.
 
----
+## Persyaratan
 
-## 📋 Prasyarat
+Pastikan perangkat sudah memiliki:
 
-Pastikan perangkat sudah terinstal:
+- [Node.js](https://nodejs.org/) versi 18 atau lebih baru.
+- [Git](https://git-scm.com/).
+- **npm**, yang disertakan bersama Node.js.
 
-1. **Node.js** v18+ — [Download](https://nodejs.org/)
-2. **Git** — [Download](https://git-scm.com/)
+Proyek ini menggunakan SQLite sehingga tidak memerlukan server basis data terpisah.
 
-> **Catatan:** Aplikasi ini menggunakan **SQLite**, sehingga tidak perlu install database server seperti PostgreSQL/MySQL.
+## Instalasi
 
----
-
-## 🚀 Instalasi & Setup
-
-### 1. Clone Repository
+### 1. Clone repositori
 
 ```bash
 git clone https://github.com/Dzakiudin/Perpusstakaan-Informasi-APP.git
 cd Perpusstakaan-Informasi-APP
 ```
 
-### 2. Install Dependencies
+### 2. Pasang dependensi
 
 ```bash
 npm run install:all
 ```
 
-### 3. Konfigurasi Environment
+### 3. Siapkan konfigurasi lingkungan
+
+Salin berkas contoh konfigurasi:
 
 ```bash
 cp backend/.env.example backend/.env
 ```
 
-Edit file `backend/.env` dan sesuaikan konfigurasi:
+Buka `backend/.env` dan sesuaikan nilainya dengan lingkungan lokal. Contoh berikut adalah format konfigurasi; gunakan *secret* milik sendiri dan jangan pernah mengunggah kredensial ke repositori.
 
 ```env
 DATABASE_URL="file:./dev.db"
 JWT_SECRET="ganti-dengan-secret-key-anda"
 PORT=3001
 
-# Konfigurasi email (opsional)
+# Opsional: konfigurasi email
 SMTP_HOST="smtp.gmail.com"
 SMTP_PORT=465
 SMTP_USER="email-anda@gmail.com"
 SMTP_PASS="app-password-anda"
 ```
 
-### 4. Setup Database
+### 4. Siapkan basis data
 
 ```bash
 cd backend
@@ -126,109 +154,123 @@ npx prisma db seed
 cd ..
 ```
 
----
+### 5. Jalankan aplikasi
 
-## 🏃 Cara Menjalankan
+Buka dua terminal dari direktori utama proyek.
 
-Buka **2 terminal** terpisah:
+**Terminal 1 — Backend**
 
-**Terminal 1 — Backend:**
 ```bash
 npm run dev:backend
 ```
 
-**Terminal 2 — Frontend:**
+**Terminal 2 — Frontend**
+
 ```bash
 npm run dev:frontend
 ```
 
-Aplikasi akan berjalan di:
-- **Frontend:** `http://localhost:5173`
-- **Backend API:** `http://localhost:3001`
+Jika konfigurasi bawaan belum diubah, alamat lokal yang digunakan:
 
-### Default Login
+| Layanan | Alamat |
+|---|---|
+| Frontend | http://localhost:5173 |
+| Backend API | http://localhost:3001 |
+| Swagger UI | http://localhost:3001/api-docs |
 
-| Role | Email | Password |
-|------|-------|----------|
+## Akun Awal
+
+Jika proses *seed* menyediakan akun demo, README proyek sebelumnya mencantumkan kredensial berikut:
+
+| Peran | Email | Kata sandi |
+|---|---|---|
 | Admin | `admin@perpus.com` | `admin123` |
 | Pustakawan | `pustakawan@perpus.com` | `pustakawan123` |
 
----
+Gunakan akun tersebut hanya untuk pengembangan lokal. Ganti kredensial bawaan sebelum aplikasi digunakan di lingkungan nyata.
 
-## 📖 Dokumentasi API
+## Dokumentasi API
 
-Akses Swagger UI saat backend berjalan:
+Setelah backend berjalan, buka Swagger UI:
 
-```
+```text
 http://localhost:3001/api-docs
 ```
 
----
+## Struktur Proyek
 
-## 📁 Struktur Project
-
-```
-perpus/
-├── frontend/             # React + Vite (UI)
+```text
+Perpusstakaan-Informasi-APP/
+├── frontend/                 # Antarmuka React + Vite
 │   ├── src/
-│   │   ├── components/   # Komponen reusable
-│   │   ├── pages/        # Halaman aplikasi
-│   │   ├── services/     # API client
-│   │   └── App.tsx       # Root component
+│   │   ├── components/       # Komponen antarmuka
+│   │   ├── pages/            # Halaman aplikasi
+│   │   ├── services/         # Klien API
+│   │   └── App.tsx            # Komponen utama
 │   └── package.json
-├── backend/              # Node.js + Express (API)
+├── backend/                  # API Node.js + Express
 │   ├── src/
-│   │   ├── controllers/  # Request handlers
-│   │   ├── routes/       # API routes
-│   │   ├── services/     # Business logic
-│   │   ├── middleware/   # Auth middleware
-│   │   ├── utils/        # Logger, swagger, dll
-│   │   └── app.ts        # Entry point
+│   │   ├── controllers/      # Pengendali permintaan
+│   │   ├── routes/           # Rute API
+│   │   ├── services/         # Logika bisnis
+│   │   ├── middleware/       # Middleware
+│   │   ├── utils/             # Utilitas
+│   │   └── app.ts             # Titik masuk aplikasi
 │   ├── prisma/
-│   │   ├── schema.prisma # Database schema
-│   │   └── seed.ts       # Data awal
+│   │   ├── schema.prisma     # Skema Prisma
+│   │   └── seed.ts             # Data awal
 │   └── package.json
-├── database_guide.md     # Panduan pengelolaan database
-├── package.json          # Root monorepo config
+├── docs/                     # Aset gambar dan dokumentasi visual
+├── database_guide.md         # Panduan pengelolaan basis data
+├── package.json              # Konfigurasi monorepo
 └── README.md
 ```
 
+## Pengelolaan Basis Data
+
+Baca [database_guide.md](./database_guide.md) untuk panduan lebih lanjut, termasuk penggunaan DB Browser for SQLite, Prisma Studio, *seeding*, dan *migration*.
+
+Perintah yang umum digunakan dari direktori yang sesuai:
+
+```bash
+npx prisma studio
+npx prisma migrate dev
+npx prisma db seed
+```
+
+## NPM Scripts
+
+### Dari direktori utama
+
+| Perintah | Keterangan |
+|---|---|
+| `npm run install:all` | Memasang dependensi proyek. |
+| `npm run dev:frontend` | Menjalankan frontend dalam mode pengembangan. |
+| `npm run dev:backend` | Menjalankan backend dalam mode pengembangan. |
+| `npm run build` | Menjalankan skrip build pada workspace. |
+| `npm run test` | Menjalankan skrip pengujian yang tersedia. |
+
+### Skrip backend
+
+| Perintah | Keterangan |
+|---|---|
+| `npm run db:migrate -w backend` | Menjalankan migrasi basis data. |
+| `npm run db:seed -w backend` | Menambahkan data awal. |
+| `npm run db:reset -w backend` | Mereset basis data sesuai skrip backend. |
+| `npm run test -w backend` | Menjalankan pengujian backend. |
+
+Ketersediaan perintah khusus backend mengikuti skrip yang didefinisikan dalam `backend/package.json`.
+
+## Kontribusi
+
+Saran dan perbaikan dapat diajukan melalui *issue* atau *pull request* di repositori ini.
+
+## Lisensi dan Hak Cipta
+
+© 2026 **Ahmad Dzakiudin**. Seluruh hak cipta dilindungi. Silakan baca berkas [LICENSE](./LICENSE) untuk ketentuan penggunaan.
+
 ---
 
-## 🗃️ Pengelolaan Database
-
-Lihat [`database_guide.md`](./database_guide.md) untuk panduan lengkap:
-
-- Akses database via **DB Browser for SQLite** (tanpa terminal)
-- Kelola data visual via **Prisma Studio** (`npx prisma studio`)
-- Isi data awal via **seeding** (`npm run db:seed`)
-- Update struktur via **migration** (`npx prisma migrate dev`)
-
----
-
-## 📝 NPM Scripts
-
-| Command | Keterangan |
-|---------|-----------|
-| `npm run install:all` | Install semua dependencies |
-| `npm run dev:frontend` | Jalankan frontend (dev mode) |
-| `npm run dev:backend` | Jalankan backend (dev mode) |
-| `npm run build` | Build semua workspaces |
-| `npm run test` | Jalankan semua test |
-
-### Backend-specific Scripts
-
-| Command | Keterangan |
-|---------|-----------|
-| `npm run db:migrate -w backend` | Jalankan database migration |
-| `npm run db:seed -w backend` | Seed data awal |
-| `npm run db:reset -w backend` | Reset database |
-| `npm run test -w backend` | Jalankan unit test |
-
----
-
-## 📄 Lisensi & Hak Cipta
-
-© 2026 **Ahmad Dzakiudin**. All Rights Reserved.
-
-Seluruh informasi dan konsep teknis yang terkandung dalam project ini adalah hak milik intelektual Ahmad Dzakiudin. Dilarang keras menyebarluaskan atau mereproduksi materi ini tanpa izin tertulis dari pemilik.
+<p align="center">
+  Dibangun untuk membantu pengelolaan perpustakaan menjadi lebih terorganisasi.
+</p>
