@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081522"/><stop offset=".55" stop-color="#0d3040"/><stop offset="1" stop-color="#092235"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#1bb99f" stop-opacity=".28"/><stop offset="1" stop-color="#1bb99f" stop-opacity="0"/></radialGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000" flood-opacity=".34"/></filter>
+  <style>
+  .sans{font-family:Inter,Arial,Helvetica,sans-serif}.muted{fill:#c3d7e2}.white{fill:#f4f8fb}.mint{fill:#65e4cb}
+  </style>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><ellipse cx="1250" cy="390" rx="600" ry="500" fill="url(#glow)"/>
+<!-- brand -->
+<g transform="translate(92 62)"><rect width="66" height="66" rx="19" fill="#25b69d"/><path d="M17 20l15 6v27l-15-6z" fill="#fff"/><path d="M36 26l15-6v27l-15 6z" fill="#d9fff7"/><path d="M34 26v28" stroke="#0b6d68" stroke-width="2.5"/></g>
+<text class="sans white" x="177" y="99" font-size="25" font-weight="800" letter-spacing=".5">PERPUSTAKAAN</text><text class="sans mint" x="177" y="121" font-size="15" font-weight="800" letter-spacing="1.5">INFORMASI APP</text>
+<rect x="1300" y="78" width="200" height="41" rx="21" fill="none" stroke="#58cdbb" stroke-width="2"/><text class="sans" x="1400" y="104" text-anchor="middle" fill="#a3f3e4" font-size="16" font-weight="800" letter-spacing="1">SMART LIBRARY</text>
+<!-- copy -->
+<text class="sans mint" x="95" y="221" font-size="22" font-weight="800" letter-spacing="1.5">DIGITAL LIBRARY MANAGEMENT</text>
+<text class="sans white" x="90" y="307" font-size="66" font-weight="850">Kelola Perpustakaan</text><text class="sans mint" x="90" y="389" font-size="66" font-weight="850">Lebih Cerdas.</text>
+<text class="sans muted" x="95" y="444" font-size="25">Satu platform untuk koleksi buku, anggota,</text><text class="sans muted" x="95" y="482" font-size="25">peminjaman, reservasi, dan laporan.</text>
+<g class="sans" font-size="15" font-weight="800">
+ <rect x="95" y="535" width="180" height="46" rx="23" fill="#133441" stroke="#2e8f8d"/><circle cx="116" cy="558" r="6" fill="#65e4cb"/><text x="134" y="563" fill="#effafa">KOLEKSI BUKU</text>
+ <rect x="292" y="535" width="232" height="46" rx="23" fill="#133441" stroke="#2e8f8d"/><circle cx="313" cy="558" r="6" fill="#65e4cb"/><text x="331" y="563" fill="#effafa">PINJAM &amp; KEMBALI</text>
+ <rect x="541" y="535" width="212" height="46" rx="23" fill="#133441" stroke="#2e8f8d"/><circle cx="562" cy="558" r="6" fill="#65e4cb"/><text x="580" y="563" fill="#effafa">LAPORAN DIGITAL</text>
+</g>
+<rect x="95" y="640" width="281" height="64" rx="17" fill="#65e4cb"/><text class="sans" x="235" y="679" text-anchor="middle" fill="#092a39" font-size="18" font-weight="850" letter-spacing=".5">EXPLORE THE PROJECT</text>
+<text class="sans" x="96" y="783" fill="#8eafc0" font-size="17" font-weight="800" letter-spacing="1">REACT  •  NODE.JS  •  TYPESCRIPT  •  SQLITE</text><text class="sans" x="96" y="833" fill="#7f9bae" font-size="17">Built for a more organized library experience.</text>
+<!-- app mockup -->
+<g filter="url(#shadow)"><rect x="830" y="170" width="670" height="575" rx="25" fill="#f7fafc"/><path d="M855 170h620a25 25 0 0 1 25 25v26H830v-26a25 25 0 0 1 25-25z" fill="#e7eef2"/><circle cx="858" cy="194" r="6" fill="#ef6666"/><circle cx="880" cy="194" r="6" fill="#f1bd4c"/><circle cx="902" cy="194" r="6" fill="#4cc18b"/><rect x="958" y="184" width="431" height="23" rx="11.5" fill="#fbfdfe"/><text class="sans" x="976" y="200" fill="#64798a" font-size="12">app.perpustakaan.local/dashboard</text>
+<path d="M830 221h172v524H830z" fill="#112b3d"/><rect x="850" y="240" width="29" height="29" rx="8" fill="#25b69d"/><path d="M856 247l7 3v13l-7-3z" fill="#fff"/><path d="M865 250l8-3v13l-8 3z" fill="#dcfff7"/><text class="sans" x="889" y="259" fill="#f8fbfd" font-size="17" font-weight="800">Perpus</text><text class="sans" x="850" y="306" fill="#7294a8" font-size="11" font-weight="800">MENU UTAMA</text>
+<rect x="843" y="321" width="143" height="40" rx="9" fill="#245461"/>
+<g class="sans" font-size="14"><g fill="none" stroke="#6ce3cb" stroke-width="2"><rect x="855" y="333" width="13" height="13" rx="3"/><rect x="855" y="382" width="13" height="13" rx="3"/><rect x="855" y="431" width="13" height="13" rx="3"/><rect x="855" y="480" width="13" height="13" rx="3"/><rect x="855" y="529" width="13" height="13" rx="3"/><rect x="855" y="578" width="13" height="13" rx="3"/></g><text x="880" y="345" fill="#f2fcff" font-weight="800">Dashboard</text><text x="880" y="394" fill="#a5bdc9">Data Buku</text><text x="880" y="443" fill="#a5bdc9">Anggota</text><text x="880" y="492" fill="#a5bdc9">Peminjaman</text><text x="880" y="541" fill="#a5bdc9">Reservasi</text><text x="880" y="590" fill="#a5bdc9">Laporan</text></g>
+<text class="sans" x="1031" y="272" fill="#18354a" font-size="25" font-weight="850">Dashboard</text><text class="sans" x="1032" y="291" fill="#7b8e9c" font-size="12">Ringkasan aktivitas perpustakaan</text><rect x="1374" y="245" width="93" height="33" rx="9" fill="#239f8b"/><text class="sans" x="1420" y="266" text-anchor="middle" fill="#fff" font-size="13" font-weight="800">+ Buku</text>
+<g class="sans">
+ <g><rect x="1027" y="315" width="132" height="96" rx="12" fill="#fff" stroke="#dfe8ec"/><text x="1039" y="339" fill="#8093a1" font-size="10" font-weight="800">TOTAL BUKU</text><text x="1039" y="377" fill="#203d50" font-size="27" font-weight="850">1.284</text><text x="1039" y="398" fill="#28a987" font-size="11" font-weight="800">↗ 12%</text></g>
+ <g><rect x="1174" y="315" width="132" height="96" rx="12" fill="#fff" stroke="#dfe8ec"/><text x="1186" y="339" fill="#8093a1" font-size="10" font-weight="800">ANGGOTA</text><text x="1186" y="377" fill="#203d50" font-size="27" font-weight="850">356</text><text x="1186" y="398" fill="#28a987" font-size="11" font-weight="800">↗ 8%</text></g>
+ <g><rect x="1321" y="315" width="132" height="96" rx="12" fill="#fff" stroke="#dfe8ec"/><text x="1333" y="339" fill="#8093a1" font-size="10" font-weight="800">DIPINJAM</text><text x="1333" y="377" fill="#203d50" font-size="27" font-weight="850">87</text><text x="1333" y="398" fill="#28a987" font-size="11" font-weight="800">Aktif</text></g>
+ <rect x="1027" y="428" width="431" height="157" rx="12" fill="#fff" stroke="#dfe8ec"/><text x="1046" y="458" fill="#263f51" font-size="16" font-weight="800">Aktivitas Peminjaman</text><text x="1046" y="477" fill="#8496a3" font-size="11">7 hari terakhir</text>
+ <g stroke="#e8eff2"><path d="M1050 512H1437M1050 536H1437M1050 560H1437"/></g><polyline points="1060,541 1118,530 1176,534 1234,514 1292,524 1350,506 1408,516" fill="none" stroke="#27b69c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><g fill="#fff" stroke="#27b69c" stroke-width="2"><circle cx="1060" cy="541" r="3.5"/><circle cx="1118" cy="530" r="3.5"/><circle cx="1176" cy="534" r="3.5"/><circle cx="1234" cy="514" r="3.5"/><circle cx="1292" cy="524" r="3.5"/><circle cx="1350" cy="506" r="3.5"/><circle cx="1408" cy="516" r="3.5"/></g>
+ <rect x="1027" y="600" width="431" height="123" rx="12" fill="#fff" stroke="#dfe8ec"/><text x="1046" y="628" fill="#263f51" font-size="15" font-weight="800">Peminjaman Terbaru</text><text x="1046" y="656" fill="#899ba6" font-size="11" font-weight="800">Judul buku</text><text x="1260" y="656" fill="#899ba6" font-size="11" font-weight="800">Peminjam</text><path d="M1045 667H1440M1045 691H1440" stroke="#eaf0f3"/><text x="1046" y="684" fill="#526b7b" font-size="11">Laskar Pelangi</text><text x="1260" y="684" fill="#526b7b" font-size="11">A. Putra</text><text x="1046" y="708" fill="#526b7b" font-size="11">Bumi Manusia</text><text x="1260" y="708" fill="#526b7b" font-size="11">N. Sari</text>
+</g></g>
+<circle cx="1465" cy="132" r="7" fill="#59e5cf"/><circle cx="1488" cy="132" r="7" fill="#59e5cf" opacity=".65"/><path d="M1430 820h80" stroke="#42bda9" stroke-width="3"/>
+</svg>
